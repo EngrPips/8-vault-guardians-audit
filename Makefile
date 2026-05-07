@@ -12,7 +12,9 @@ clean  :; forge clean
 # Remove modules
 remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gitmodules && git add . && git commit -m "modules"
 
-install :; forge install foundry-rs/forge-std@f73c73d --no-commit && forge install openzeppelin/openzeppelin-contracts@932fddf --no-commit
+
+install :; forge install foundry-rs/forge-std && forge install openzeppelin/openzeppelin-contracts
+
 
 # Update Dependencies
 update:; forge update
